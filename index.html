@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TH landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="landing-style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+</head>
+<body>
+    
+    <section class="sec">
+        
+        <!-- navigation section -->
+        <header>
+            <a href="#"><img src="IMG/LOGO.png" alt="LOGO" class="logo"></a>
+            <div class="toggleMenu" onclick="Menutoggle();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+
+        <!-- content section -->
+        <div class="content">
+            <div class="textbox">
+                <h2>The flavour of<br><span>healthy</span></h2>
+                <p><span style="color:bisque;"><b>we are introducing our new products :</b></span> the energy drinks.<br>
+                    A typical energy drink may contain the following: carbonated water, around 40 grams of sugar (from sucrose and/or
+                    glucose), 160 mg or more of caffeine, artificial sweetener, and herbs/substances associated with mental alertness and
+                    performance but that lack scientific evidence with controlled trials (taurine, panax ginseng root extract, L-carnitine,
+                    L-tartarate, guarana seed extract, B vitamins).
+                </p>
+                <a href="#">View all Products</a>
+            </div>
+            <!-- product picture -->
+            <div class="imgbox">
+                <img src="img/product-1.png" alt="product-1" class="th">
+            </div>
+        </div>
+
+        <!-- products section -->
+        <ul class="products">
+            <li><img src="img/product-1.png" alt="product-1" onclick="imgSlider('img/product-1.png');changeBgColor('#04AA6D')"></li>
+            <li><img src="img/product-2.png" alt="product-2" onclick="imgSlider('img/product-2.png');changeBgColor('#71797E')"></li>
+            <li><img src="img/product-3.png" alt="product-3" onclick="imgSlider('img/product-3.png');changeBgColor('#C70039')"></li>
+        </ul>
+
+        <!-- icon section -->
+        <ul class="icon">
+            <li><a href="#"><img src="img/facebook.png" alt="facebook"></a></li>
+            <li><a href="#"><img src="img/twitter.png" alt="twitter"></a></li>
+            <li><a href="#"><img src="img/instagram.png" alt="instagram"></a></li>
+            <li><a href="#"><img src="img/snapchat.png" alt="snapchat"></a></li>
+        </ul>
+    </section>
+
+    <!-- script -->
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.th').src = anything;
+        }
+        function changeBgColor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+        
+        function Menutoggle(){
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.navigation');
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
